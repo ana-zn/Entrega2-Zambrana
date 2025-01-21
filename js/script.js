@@ -2,7 +2,7 @@
 const Servicios = [
     {
         img: "../img/wine.jpg", 
-        servicesName: "Cata Exclusiva de Vinos y Maridajes", 
+        servicesName: "Cata Vinos y Maridajes", 
         description: "Ofrece catas de vino exclusivas en la que los visitantes puedan explorar sus sentidos.Incluye una selección de vinos y maridajes (quesos, frutas y chocolates), guiados por un sommelier experto.", 
         duration: "1.5 horas.", 
         days: "Lunes a Sabados", 
@@ -67,9 +67,9 @@ function createProductCard(product) {
     price.innerHTML = `<i class='bx bx-money-withdraw'></i> $${product.price || "3,000"} x persona`;
 
     // Botón de reserva
-    const reserveButton = document.createElement("button");
-    reserveButton.textContent = "Reservar";
-    reserveButton.addEventListener("click", () => addToCart(product));
+     const reserveButton = document.createElement("button");
+     reserveButton.textContent = "Reservar";
+     reserveButton.addEventListener("click", () => openModal(product)); // Llamar la función openModal
 
     // Ensamblar detalles
     details.append(duration, days, minPeople, price);
