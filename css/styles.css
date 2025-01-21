@@ -1,0 +1,161 @@
+/*Reset de estilos*/
+*{
+    margin:0px; 
+    padding: 0px;
+}
+:root{
+    --blanco-alabastro: #F8EFEA; 
+    --onix-color: #231F20; 
+}
+/* Estilos generales */
+body {
+    font-family: "Inter", serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+    background: var(--blanco-alabastro)
+    
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    gap: 9rem;
+    align-items: center;
+    background: url(/img/vista-frontal-sabroso-plato-frutas-uvas-botella-vino-queso-copa-vino-oscuridad.jpg);
+    background-size: cover;
+    height: 800px;
+    color: var(--blanco-alabastro); 
+    padding: 2rem 7.5rem;
+}
+header .container-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+header .nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+}
+
+header .nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+.hero{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.hero h1 {
+    font-size:5rem;
+    line-height: 90%;
+    text-align: right;
+    font-family: "Libre Bodoni", serif;;
+    margin-bottom: 1rem;
+}
+
+.hero .btn {
+    background-color: transparent;
+    color: var(--blanco-alabastro); 
+    border: 2px solid var(--blanco-alabastro);
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1.25rem;
+    width: 160px;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+.features .feature {
+    text-align: center;
+    padding: 1rem;
+}
+
+.features .feature img {
+    max-width: 80px;
+    margin-bottom: 1rem;
+}
+h3, p{
+    color: var(--onix-color);
+}
+.tour {
+    text-align: center;
+    padding: 2rem;
+}
+
+.tour h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+   
+}
+
+.tour .btn {
+    background-color: #3c2f2f;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+.services .service {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1.5rem;
+}
+
+.services .service ul {
+    list-style: none;
+    padding: 0;
+}
+
+.services .service ul li {
+    margin: 0.5rem 0;
+}
+
+.services .btn {
+    background-color: #d4a373;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    display: block;
+    margin: 1rem auto 0;
+}
+
+footer {
+    background-color: var(--onix-color); 
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+footer .social a {
+    color: #d4a373;
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
