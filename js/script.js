@@ -1,24 +1,27 @@
-// Declarar el array de servicios antes de utilizarlo
+// Array del Servicio
 const Servicios = [
     {
-        img: "ruta/a/la/imagen1.jpg", // Ruta de la imagen
-        servicesName: "Clase de Cocina Gourmet", // Nombre del servicio
-        duration: "2 horas", // Duración del servicio
-        days: "Lunes a Viernes", // Disponibilidad
-        minPeople: 4, // Mínimo de personas
-        price: 4500, // Precio por persona
+        img: "../img/wine.jpg", 
+        servicesName: "Cata Exclusiva de Vinos y Maridajes", 
+        description: "Ofrece catas de vino exclusivas en la que los visitantes puedan explorar sus sentidos.Incluye una selección de vinos y maridajes (quesos, frutas y chocolates), guiados por un sommelier experto.", 
+        duration: "1.5 horas.", 
+        days: "Lunes a Sabados", 
+        minPeople: 4,
+        price: 4500, 
     },
     {
-        img: "ruta/a/la/imagen2.jpg",
-        servicesName: "Tour Guiado por la Ciudad",
+        img: "../img/relaxing-picnic-day-together.jpg",
+        servicesName: "Tour por Viñedos + Cena",
+        description: " Un recorrido por los viñedos, seguido de una cena o almuerzo cerca de los viñedos. La experiencia incluye una guía que narra la historia de la bodega y una degustación en cada estación del tour.", 
         duration: "3 horas",
         days: "Sábados y Domingos",
         minPeople: 2,
         price: 3000,
     },
     {
-        img: "ruta/a/la/imagen3.jpg",
-        servicesName: "Taller de Pintura al Aire Libre",
+        img: "../img/side-view-hand-pouring-wine.jpg",
+        servicesName: "Diseña y Embotella tu Vino",
+        description: "Una experiencia en la que los visitantes mezclan diferentes variedades de uvas para crear su propio vino. Al final, se llevan una botella personalizada con una etiqueta diseñada por ellos mismos.", 
         duration: "1:30 horas",
         days: "Todos los días",
         minPeople: 3,
@@ -40,25 +43,28 @@ function createProductCard(product) {
     const title = document.createElement("h3");
     title.textContent = product.servicesName;
 
+    // Descripcion del Servicio 
+    const description = document.createElement("p"); 
+    description.textContent = product.description; 
     // Detalles
     const details = document.createElement("div");
     details.classList.add("details");
 
     // Duración
     const duration = document.createElement("p");
-    duration.innerHTML = `<span>⏱️</span> ${product.duration || "1:30 horas"}`;
+    duration.innerHTML = `<i class='bx bx-time-five'></i>${product.duration || "1:30 horas"}`;
 
-    // Días
+    // Días 
     const days = document.createElement("p");
-    days.innerHTML = `<span>📅</span> ${product.days || "Lunes a Domingo"}`;
+    days.innerHTML = `<i class='bx bx-calendar'></i> ${product.days || "Lunes a Domingo"}`;
 
     // Personas mínimas
     const minPeople = document.createElement("p");
-    minPeople.innerHTML = `<span>👥</span> Min: ${product.minPeople || "2"} personas`;
+    minPeople.innerHTML = `<i class='bx bx-group'></i>  Min: ${product.minPeople || "2"} personas`;
 
     // Precio
     const price = document.createElement("p");
-    price.innerHTML = `<span>💵</span> $${product.price || "3,000"} x persona`;
+    price.innerHTML = `<i class='bx bx-money-withdraw'></i> $${product.price || "3,000"} x persona`;
 
     // Botón de reserva
     const reserveButton = document.createElement("button");
@@ -69,7 +75,7 @@ function createProductCard(product) {
     details.append(duration, days, minPeople, price);
 
     // Ensamblar todo
-    content.append(img, title, details, reserveButton);
+    content.append(img, title, description, details, reserveButton);
 
     return content;
 }
@@ -77,6 +83,6 @@ function createProductCard(product) {
 // Recorrer el array y crear las tarjetas de productos
 Servicios.forEach((product) => {
     const productCard = createProductCard(product);
-    shopContent.append(productCard);
+    ServicesContent.append(productCard);
     console.log("Producto agregado al DOM:", product.servicesName);
 });
