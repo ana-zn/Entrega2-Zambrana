@@ -24,20 +24,34 @@ function openModal(product) {
         </form>
         
     `;
+  // Mostrar el modal
+  modal.style.display = "block";
 
-    // Mostrar el modal
-    modal.style.display = "block";
+  // Escuchar el evento de envío del formulario
+  const reservationForm = modal.querySelector("#reservationForm");
+  reservationForm.addEventListener("submit", function(event) {
+      event.preventDefault();
+      const name = reservationForm.querySelector("#name").value;
+      const email = reservationForm.querySelector("#email").value;
+      const people = reservationForm.querySelector("#people").value;
+
+      const confirmationMessage = `
+          ¡Reserva confirmada!
+          Nombre: ${name}
+          Correo: ${email}
+          Servicio: ${product.servicesName}
+          Personas: ${people}
+          Precio total: $${product.price * people}
+          ¡Te esperamos!
+      `;
+
+      alert(confirmationMessage);
+      closeModal();
+  });
 }
 
 // Función para cerrar el modal
 function closeModal() {
-    const modal = document.getElementById("reservationModal");
-    modal.style.display = "none";
+  const modal = document.getElementById("reservationModal");
+  modal.style.display = "none";
 }
-
-// Escuchar el formulario de reserva
-document.getElementById("reservationForm")?.addEventListener("submit", function(event) {
-    event.preventDefault();
-    alert("¡Reserva confirmada!");
-    closeModal();
-});

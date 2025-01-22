@@ -1,7 +1,7 @@
 // Array del Servicio
 const Servicios = [
     {
-        img: "../img/wine.jpg", 
+        img: "img/wine.jpg", 
         servicesName: "Cata Vinos y Maridajes", 
         description: "Ofrece catas de vino exclusivas en la que los visitantes puedan explorar sus sentidos.Incluye una selección de vinos y maridajes (quesos, frutas y chocolates), guiados por un sommelier experto.", 
         duration: "1.5 horas.", 
@@ -10,7 +10,7 @@ const Servicios = [
         price: 4500, 
     },
     {
-        img: "../img/relaxing-picnic-day-together.jpg",
+        img: "img/relaxing-picnic-day-together.jpg",
         servicesName: "Tour por Viñedos + Cena",
         description: " Un recorrido por los viñedos, seguido de una cena o almuerzo cerca de los viñedos. La experiencia incluye una guía que narra la historia de la bodega y una degustación en cada estación del tour.", 
         duration: "3 horas",
@@ -19,7 +19,7 @@ const Servicios = [
         price: 3000,
     },
     {
-        img: "../img/side-view-hand-pouring-wine.jpg",
+        img: "img/side-view-hand-pouring-wine.jpg",
         servicesName: "Diseña y Embotella tu Vino",
         description: "Una experiencia en la que los visitantes mezclan diferentes variedades de uvas para crear su propio vino. Al final, se llevan una botella personalizada con una etiqueta diseñada por ellos mismos.", 
         duration: "1:30 horas",
